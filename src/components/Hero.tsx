@@ -93,7 +93,7 @@ export default function Hero() {
           
           <div className="relative z-10 w-full max-w-[420px] aspect-[3/4] bg-[var(--surface)] p-2 rounded-[32px] border border-white/10 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700">
             <img 
-              src="https://i.ibb.com/40s97Zf/Ruhan-Shah.png" 
+              src="https://i.ibb.co.com/xCY8pT9/Whats-App-Image-2023-05-25-at-20-49-32-2.jpg" 
               alt="Ruhan shah" 
               className="w-full h-full object-cover rounded-[24px]"
               referrerPolicy="no-referrer"
