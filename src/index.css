@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg: #080b12;
+    --bg2: #0d1120;
+    --surface: #111827;
+    --surface2: #1a2035;
+    --accent: #7c3aed;
+    --accent2: #06b6d4;
+    --gold: #f59e0b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --border: rgba(124, 58, 237, 0.22);
+    --glow: rgba(124, 58, 237, 0.15);
+  }
+
+  * {
+    @apply m-0 p-0 box-border cursor-none;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)] font-sans overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .grad-text {
+    @apply bg-linear-to-br from-white to-[var(--accent2)] bg-clip-text text-transparent;
+  }
+
+  .grad-accent {
+    @apply bg-linear-to-br from-[var(--accent)] to-[var(--accent2)] bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-[rgba(8,11,18,0.75)] backdrop-blur-xl border-b border-[var(--border)];
+  }
+
+  .card-3d {
+    @apply bg-[var(--surface)] border border-[var(--border)] rounded-3xl p-8 transition-transform duration-500 shadow-[20px_20px_60px_rgba(0,0,0,0.5)];
+  }
+
+  .badge-float {
+    @apply absolute bg-[rgba(8,11,18,0.85)] backdrop-blur-md border border-[var(--border)] rounded-2xl px-4 py-2 flex items-center gap-2 z-10;
+  }
+
+  .btn-primary {
+    @apply bg-[var(--accent)] text-white px-7 py-3 rounded-full text-sm font-semibold transition-all hover:shadow-[0_0_36px_rgba(124,58,237,0.55)] hover:-translate-y-0.5 inline-flex items-center gap-2;
+  }
+
+  .btn-outline {
+    @apply border border-[var(--border)] text-[var(--text)] px-7 py-3 rounded-full text-sm font-medium transition-all bg-white/5 hover:border-[var(--accent)] hover:bg-[var(--accent)]/10 inline-flex items-center gap-2;
+  }
+}
+
+.markdown-body {
+  @apply text-lg leading-relaxed text-[var(--muted)];
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body strong {
+  @apply text-[var(--text)] font-semibold;
+}
